@@ -77,34 +77,34 @@ Proyecto desarrollado como tarea grupal para el curso de Programación — Fase 
 
 ## Estructura del proyecto
 
+```
 software_fj/
 │
 ├── entidades/
-│   ├── init.py
+│   ├── __init__.py
 │   ├── entidad_base.py
 │   ├── cliente.py
 │   └── reserva.py
 │
 ├── servicios/
-│   ├── init.py
+│   ├── __init__.py
 │   ├── servicio_base.py
 │   ├── reserva_sala.py
 │   ├── alquiler_equipo.py
 │   └── asesoria.py
 │
 ├── excepciones/
-│   ├── init.py
+│   ├── __init__.py
 │   └── excepciones.py
 │
 ├── utils/
-│   ├── init.py
+│   ├── __init__.py
 │   └── logger.py
 │
 ├── eventos.log
 ├── README.md
 └── main.py
-
----
+```
 
 ## Estándar de branches
 
@@ -114,6 +114,7 @@ tipo/descripcion-en-español-con-guiones
 ### Tipos
 
 | Tipo | Cuándo usarlo |
+|---|---|
 | `estructura/` | Organización de carpetas, configuración inicial |
 | `feature/` | Agregar algo nuevo (una clase, un módulo) |
 | `fix/` | Corregir un bug o error |
