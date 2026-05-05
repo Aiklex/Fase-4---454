@@ -106,12 +106,11 @@ software_fj/
 └── main.py
 ```
 
-## Estándar de branches
+## Estándar para NOMBRAR elementos.
 
-### Formato
-tipo/descripcion-en-español-con-guiones
+### Nombres de branches
 
-### Tipos
+| tipo/descripcion-corta |
 
 | Tipo | Cuándo usarlo |
 |---|---|
@@ -121,30 +120,44 @@ tipo/descripcion-en-español-con-guiones
 | `docs/` | Documentación o comentarios |
 | `test/` | Agregar pruebas |
 
-### Ejemplos
+Ejemplos:
 
-estructura/carpetas-base
-feature/clase-cliente
-feature/clase-reserva
-feature/servicios-especializados
-feature/excepciones-personalizadas
-feature/logger
-feature/simulacion-principal
-fix/validacion-email-cliente
-docs/readme
-
-### Reglas
-- Todo en **minúsculas**
-- Palabras separadas con **guión** `-`
-- Descripción corta y clara, máximo 3-4 palabras
-- Descripciones siempre en **español**
+- feature/clase-cliente
+- feature/servicios-especializados
+- fix/validacion-email-cliente
+- docs/readme
 
 ---
 
-## Ejecución del proyecto
+### Nombres de commits
 
-```bash
-python main.py
-```
+| autor|tipo|paso|descripcion-corta |
 
-Los eventos y errores quedan registrados automáticamente en `eventos.log`.
+| Tipo | Cuándo usarlo |
+|---|---|
+| `feat` | Agregar código nuevo |
+| `fix` | Corregir un bug |
+| `docs` | Documentación o comentarios |
+| `refactor` | Reorganizar código |
+| `chore` | Configuración o estructura |
+| `test` | Agregar pruebas |
+| `merge` | Merge de branches |
+
+Ejemplos:
+
+- alexandra|feat|paso-1|agrega-excepciones-personalizadas
+- yasmin|feat|paso-2|agrega-clase-cliente
+- juan|fix|paso-3|corrige-calculo-costo
+
+---
+
+### Nombres de Pull Requests
+
+| autor|tipo|paso|descripcion-corta |
+
+Ejemplos:
+
+- alexandra|feat|paso-1|clases-abstractas-y-base
+- yasmin|feat|paso-2|clase-cliente
+
+
