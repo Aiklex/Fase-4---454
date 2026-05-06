@@ -106,32 +106,25 @@ software_fj/
 └── main.py
 ```
 
-## Estándar para NOMBRAR elementos.
+## Estándar para NOMBRES
 
-### Nombres de branches
+### Nombres de BRANCHES
 
-| tipo/descripcion-corta |
-
-| Tipo | Cuándo usarlo |
-|---|---|
-| `estructura/` | Organización de carpetas, configuración inicial |
-| `feature/` | Agregar algo nuevo (una clase, un módulo) |
-| `fix/` | Corregir un bug o error |
-| `docs/` | Documentación o comentarios |
-| `test/` | Agregar pruebas |
+| paso/autor/descripcion-corta |
 
 Ejemplos:
 
-- feature/clase-cliente
-- feature/servicios-especializados
-- fix/validacion-email-cliente
-- docs/readme
+- paso-1/alexandra/clases-abstractas-y-base
+- paso-2/yasmin/clase-cliente
+- paso-3/jhonatan/servicios-especializados
+- paso-4/juan/clase-reserva
+- paso-5/pedro/simulacion-principal
 
 ---
 
 ### Nombres de commits
 
-| autor|tipo|paso|descripcion-corta |
+| paso/tipo/autor/descripcion-corta |
 
 | Tipo | Cuándo usarlo |
 |---|---|
@@ -145,19 +138,22 @@ Ejemplos:
 
 Ejemplos:
 
-- alexandra|feat|paso-1|agrega-excepciones-personalizadas
-- yasmin|feat|paso-2|agrega-clase-cliente
-- juan|fix|paso-3|corrige-calculo-costo
+- paso-1/feat/alexandra/agrega-excepciones-personalizadas
+- paso-2/feat/liseth/agrega-clase-cliente
 
 ---
 
-### Nombres de Pull Requests
+### Nombres de Pull Requests y MERGES
 
-| autor|tipo|paso|descripcion-corta |
+| Paso N | Autor | Descripcion |
 
 Ejemplos:
 
-- alexandra|feat|paso-1|clases-abstractas-y-base
-- yasmin|feat|paso-2|clase-cliente
+- Paso 1 | Alexandra | Clases Abstractas y Base
+- Paso 2 | Liseth | Clase Cliente
+- Paso 3 | Jhonatan | Servicios Especializados
+
+
+
 
 
