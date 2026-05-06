@@ -16,7 +16,7 @@ Proyecto desarrollado como tarea grupal para el curso de Programación — Fase 
 |---|---|
 | Francy Alexandra Largo Alvarado | Paso 1 — Estructura base y clases abstractas |
 | Yasmin Liseth Gelves Pena | Paso 2 — Clase Cliente |
-| Integrante 3 | Paso 3 — Servicios especializados |
+| Jose Guzman | Paso 3 — Servicios especializados |
 | Integrante 4 | Paso 4 — Clase Reserva |
 | Integrante 5 | Paso 5 — Sistema principal y simulación |
 
