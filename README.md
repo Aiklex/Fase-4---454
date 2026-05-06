@@ -16,7 +16,7 @@ Proyecto desarrollado como tarea grupal para el curso de Programación — Fase 
 |---|---|
 | Francy Alexandra Largo Alvarado | Paso 1 — Estructura base y clases abstractas |
 | Yasmin Liseth Gelves Pena | Paso 2 — Clase Cliente |
-| Integrante 3 | Paso 3 — Servicios especializados |
+| Jose Guzman | Paso 3 — Servicios especializados |
 | Integrante 4 | Paso 4 — Clase Reserva |
 | Integrante 5 | Paso 5 — Sistema principal y simulación |
 
@@ -106,45 +106,54 @@ software_fj/
 └── main.py
 ```
 
-## Estándar de branches
+## Estándar para NOMBRES
 
-### Formato
-tipo/descripcion-en-español-con-guiones
+### Nombres de BRANCHES
 
-### Tipos
+| paso/autor/descripcion-corta |
 
-| Tipo | Cuándo usarlo |
-|---|---|
-| `estructura/` | Organización de carpetas, configuración inicial |
-| `feature/` | Agregar algo nuevo (una clase, un módulo) |
-| `fix/` | Corregir un bug o error |
-| `docs/` | Documentación o comentarios |
-| `test/` | Agregar pruebas |
+Ejemplos:
 
-### Ejemplos
-
-estructura/carpetas-base
-feature/clase-cliente
-feature/clase-reserva
-feature/servicios-especializados
-feature/excepciones-personalizadas
-feature/logger
-feature/simulacion-principal
-fix/validacion-email-cliente
-docs/readme
-
-### Reglas
-- Todo en **minúsculas**
-- Palabras separadas con **guión** `-`
-- Descripción corta y clara, máximo 3-4 palabras
-- Descripciones siempre en **español**
+- paso-1/alexandra/clases-abstractas-y-base
+- paso-2/yasmin/clase-cliente
+- paso-3/jhonatan/servicios-especializados
+- paso-4/juan/clase-reserva
+- paso-5/pedro/simulacion-principal
 
 ---
 
-## Ejecución del proyecto
+### Nombres de commits
 
-```bash
-python main.py
-```
+| paso/tipo/autor/descripcion-corta |
 
-Los eventos y errores quedan registrados automáticamente en `eventos.log`.
+| Tipo | Cuándo usarlo |
+|---|---|
+| `feat` | Agregar código nuevo |
+| `fix` | Corregir un bug |
+| `docs` | Documentación o comentarios |
+| `refactor` | Reorganizar código |
+| `chore` | Configuración o estructura |
+| `test` | Agregar pruebas |
+| `merge` | Merge de branches |
+
+Ejemplos:
+
+- paso-1/feat/alexandra/agrega-excepciones-personalizadas
+- paso-2/feat/liseth/agrega-clase-cliente
+
+---
+
+### Nombres de Pull Requests y MERGES
+
+| Paso N | Autor | Descripcion |
+
+Ejemplos:
+
+- Paso 1 | Alexandra | Clases Abstractas y Base
+- Paso 2 | Liseth | Clase Cliente
+- Paso 3 | Jhonatan | Servicios Especializados
+
+
+
+
+
