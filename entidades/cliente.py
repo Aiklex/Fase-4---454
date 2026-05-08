@@ -1,8 +1,8 @@
 import re
-from entidades.entidad_base import EntidadBase
+from entidades.entidad_base import Entidad
 from excepciones.excepciones import ClienteInvalidoError
 
-class Cliente(EntidadBase):
+class Cliente(Entidad):
     def __init__(self, id_cliente, nombre, email, telefono):
 
         # pasamos id y nombre al padre para que los almacene
@@ -67,3 +67,10 @@ class Cliente(EntidadBase):
             f"Reservas    : {len(self.__reservas)}\n"
             f"Registro    : {self.fecha_creacion.strftime('%Y-%m-%d %H:%M')}"
         )
+    def __str__(self):
+        # Lo que se ve cuando haces print(cliente)
+        return f"Cliente: {self.nombre} (ID: {self.id})"
+
+    def __repr__(self):
+        # Lo que ven los desarrolladores al depurar
+        return f"Cliente(id='{self.id}', nombre='{self.nombre}', email='{self._Cliente__email}')"
