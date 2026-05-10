@@ -1,5 +1,5 @@
-from .servicio_base import Servicio
-from excepciones.excepciones import ParametroFaltanteError, SoftwareFJError
+from servicios.servicio_base import Servicio
+from excepciones.excepciones import ParametroFaltanteError, SistemaFJError
 from utils.logger import logger
 
 class AlquilerEquipo(Servicio):
@@ -39,7 +39,7 @@ class AlquilerEquipo(Servicio):
             raise e
         except Exception as e:
             logger.critical(f"Error crítico en AlquilerEquipo: {str(e)}")
-            raise SoftwareFJError(f"Fallo inesperado al procesar el servicio: {e}") from e
+            raise SistemaFJError(f"Fallo inesperado al procesar el servicio: {e}") from e
 
     def describir(self):
         return f"Servicio de Alquiler: {self.__tipo_equipo} (Tarifa base: ${self.__tarifas.get(self.__tipo_equipo, 0)}/día)"

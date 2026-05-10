@@ -1,5 +1,5 @@
-from .servicio_base import Servicio
-from excepciones.excepciones import ParametroFaltanteError, SoftwareFJError
+from servicios.servicio_base import Servicio
+from excepciones.excepciones import ParametroFaltanteError, SistemaFJError
 from utils.logger import logger
 
 class ReservaSala(Servicio):
@@ -22,7 +22,7 @@ class ReservaSala(Servicio):
             
         if personas > self.__capacidad:
             logger.warning(f"Sobrecapacidad detectada: {personas} personas en sala de {self.__capacidad}")
-            raise SoftwareFJError(f"La sala solo tiene capacidad para {self.__capacidad} personas.")
+            raise SistemaFJError(f"La sala solo tiene capacidad para {self.__capacidad} personas.")
 
     def calcular_costo(self, horas=1, incluir_refrigerio=False, personas=0):
         """
@@ -38,11 +38,11 @@ class ReservaSala(Servicio):
                 
             logger.info(f"Cálculo de sala exitoso: ${total} para {personas} personas")
             return total
-        except (ParametroFaltanteError, SoftwareFJError) as e:
+        except (ParametroFaltanteError, SistemaFJError) as e:
             raise e
         except Exception as e:
             logger.critical(f"Error sistémico en reserva de sala: {str(e)}")
-            raise SoftwareFJError(f"Fallo crítico al reservar: {e}") from e
+            raise SistemaFJError(f"Fallo crítico al reservar: {e}") from e
 
     def describir(self):
         return f"Sala '{self.nombre}' (Capacidad: {self.__capacidad} pers., Tarifa: ${self.__precio_hora_base}/h)"

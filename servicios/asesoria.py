@@ -1,5 +1,5 @@
-from .servicio_base import Servicio
-from excepciones.excepciones import ParametroFaltanteError, SoftwareFJError
+from servicios.servicio_base import Servicio
+from excepciones.excepciones import ParametroFaltanteError, SistemaFJError
 from utils.logger import logger
 
 class AsesoriaEspecializada(Servicio):
@@ -42,7 +42,7 @@ class AsesoriaEspecializada(Servicio):
             raise e
         except Exception as e:
             logger.critical(f"Error fatal en cálculo de Asesoría: {str(e)}")
-            raise SoftwareFJError(f"Error en el sistema de asesorías: {e}") from e
+            raise SistemaFJError(f"Error en el sistema de asesorías: {e}") from e
 
     def describir(self):
         return f"Asesoría técnica en {self.__area}. Consultores niveles: Junior, Senior y Expert."
