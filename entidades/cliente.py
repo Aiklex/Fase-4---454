@@ -1,4 +1,4 @@
-import re
+
 from entidades.entidad_base import Entidad
 from excepciones.excepciones import ClienteInvalidoError
 
@@ -67,9 +67,6 @@ class Cliente(Entidad):
             f"Reservas    : {len(self.__reservas)}\n"
             f"Registro    : {self.fecha_creacion.strftime('%Y-%m-%d %H:%M')}"
         )
-    def __str__(self):
-        # Lo que se ve cuando haces print(cliente)
-        return f"Cliente: {self.nombre} (ID: {self.id})"
 
     def __repr__(self):
         # Lo que ven los desarrolladores al depurar
