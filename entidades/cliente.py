@@ -1,20 +1,27 @@
-
 from entidades.entidad_base import Entidad
 from excepciones.excepciones import ClienteInvalidoError
+
 
 class Cliente(Entidad):
     def __init__(self, id_cliente, nombre, email, telefono):
 
         # pasamos id y nombre al padre para que los almacene
         super().__init__(id=id_cliente, nombre=nombre)
+
         # Atributos encapsulados (privados con __)
         # Ahora ya NO repites id ni nombre como atributos propios
         # porque ya los heredaste del padre (self.id y self.nombre)
-        self.__email    = self.validar_email(email)
+        self.nombre = self.validar_nombre(nombre)
+        self.__email = self.validar_email(email)
         self.__telefono = self.validar_telefono(telefono)
         self.__reservas = []
 
-          # ── Validaciones ──────────────────────────────────────────────────────────
+        # ── Validaciones ──────────────────────────────────────────────────────────
+
+    def validar_nombre(self, nombre):
+        if not nombre or nombre.strip() == "":
+            raise ClienteInvalidoError("El nombre no puede estar vacío.")
+        return nombre
 
     def validar_email(self, email):
         if "@" not in email or "." not in email.split("@")[-1]:
@@ -41,7 +48,6 @@ class Cliente(Entidad):
     @property
     def reservas(self):
         return list(self.__reservas)  # retorna copia, no la lista original
-    
 
     # ── Gestión de la lista interna de reservas ───────────────────────────────
 
@@ -55,8 +61,8 @@ class Cliente(Entidad):
             self.__reservas.remove(id_reserva)
             return True
         return False
-    
-      # ── Método abstracto obligatorio heredado de EntidadBase ─────────────────
+
+    # ── Método abstracto obligatorio heredado de EntidadBase ─────────────────
 
     def __str__(self):
         return (
